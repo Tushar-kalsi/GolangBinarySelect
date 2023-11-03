@@ -1,17 +1,11 @@
-package main
+package GoSelect
 
 import (
 	"C"
 	"fmt"
 )
 
-// func pdep_u64(x, i uint64) uint64 {
-//     // Simulate the "pdep" operation using bitwise shifting and masking
-//     mask := uint64(1) << i
-//     result := x & mask
 
-//     return result
-// }
 
 func select_u64(x uint64, i uint64) int {
 	return TrailingZeros64(pdep(x, i))
