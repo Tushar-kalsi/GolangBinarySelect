@@ -1,6 +1,7 @@
-package GoSelect
+package Select
 
 import (
+	"Select/Select"
 	"testing"
 )
 
@@ -12,7 +13,7 @@ func BenchmarkSelectU64(b *testing.B) {
 	b.ResetTimer()
 
 	for n := 0; n < b.N; n++ {
-		select_u64(x, i)
+		Select.Selectu64(x, i)
 	}
 }
 
@@ -23,6 +24,6 @@ func BenchmarkTrailingZeros64(b *testing.B) {
 	b.ResetTimer()
 
 	for n := 0; n < b.N; n++ {
-		TrailingZeros64(x)
+		Select.TrailingZeros64(x)
 	}
 }
